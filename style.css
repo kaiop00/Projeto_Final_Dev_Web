@@ -12,12 +12,10 @@ body{
     color:  rgb(15, 20, 25);
     margin-right: 150px;
 }
-.navlink{
-    transition: all 0.5s;
-    cursor: pointer;
-}
 .navlink a:hover{
     text-decoration: underline;  
+    background-color: brown;
+    border-radius: 5px;
 
 }
 .imagem01{
@@ -31,4 +29,13 @@ body{
 }
 .texto1{
     padding-top: 60px;
+}
+.forms{
+    opacity : 0.3;
+}
+p{
+    padding-top: 50px;
+}
+h3{
+    padding-top: 100px;
 }

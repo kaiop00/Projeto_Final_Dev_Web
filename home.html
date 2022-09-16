@@ -34,8 +34,9 @@
                 </div>
                     <div>
                         <button type="button" class="btn btn-dark">Anunciar</button>
+                        <a href="login.html">
                         <button type="button" class="btn btn-danger"><i class="bi bi-person-fill"></i> Entrar</button>
-                        
+                    </a>
                     </div>
                     </div>
                     
@@ -43,7 +44,7 @@
                         <img src="AnderpsQuixada_005.jpeg" width="600" height="600"> </a>
                     </div>
                     <div class="text_">
-                        <h3>Pronto para procurar um imóvel para você?</h3>
+                        <h2>Pronto para procurar um imóvel para você?</h2>
                         <div class="texto1">
                         <p>O que você precisa?</p>
 
@@ -55,10 +56,27 @@
                           
                           <p>Qual o tipo?</p>
                          
-                          <div class="form-floating w-100">
-                            <select class="form-select dias_date valor" id="floatingSelectGrid" required>
-                              <option></option>
-                            </select>             
+                        <div class="forms form-floating">
+                            <select class="form-select" id="floatingSelectGrid">
+                              <option selected>Por favor insira um tipo</option>
+                              <option>Apartamento</option>
+                              <option>Casa</option>
+                              <option>Fazenda</option>
+                              <option>Casa de Condominio</option>
+                              <option>Apartamento de Condominio</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <form>
+                            <div class="mb-3">
+                              <label for="exampleInputEmail1" class="form-label"> Onde deseja sua locação? </label>
+                              <input type="email" class=" forms form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              
+                            </div>
+                        </form>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-danger" type="button"><i class="bi bi-search"></i>Buscar</button>
                         </div>
 
                         </div>
