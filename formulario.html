@@ -23,14 +23,14 @@
         <H3>Criar Conta</H3>
         
         <form action="" class="form-floating mb-3 m-3 was-validated needs-validation" novalidate>
-        <div class="form-floating mb-3 sucesso">
-            <input type="Nome" class="form-control" id="floatingInput" required>
-            <label for="floatingInput">Nome:</label>
-            <div class="invalid-feedback">
-              insira um nome valido.
-            </div>
-          </div>
-          <div class="form-floating mb-3 erro">
+            <div class="form-floating mb-3 sucesso">
+                <input type="nome" class="form-control" id="floatingInput" placeholder="a" required>
+                <label for="floatingInput">Nome:</label>
+                <div class="invalid-feedback">
+                  Insira um Nome valido.
+                </div>
+              </div>
+          <div class="form-floating mb-3 sucesso">
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
             <label for="floatingInput">Email:</label>
             <div class="invalid-feedback">
@@ -41,52 +41,60 @@
           <div class="form-floating">
             <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required minlength="6">
             <label for="floatingPassword" class="form-label">Senha:</label>
+            <div class="invalid-feedback">
+            A senha deve conter no mínimo 6 caracteres 
           </div>
           <br>
           <div class="form-floating">
             <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
             <label for="floatingPassword">Confirmar Senha:</label>
+            <div class="invalid-feedback">
+            Confirmar Senha 
           </div>
-          <h3 id="date_nasc">Data de Nascimento</h3>
+          <h2>Data de Nascimento</h2>
           
           <div class="d-flex flex-row date">
             <div class="form-floating d-flex flex-row w-100">
-              <select class="form-select mes1 valor" id="floatingSelectGrid4" required>
+              <select class="form-select mes1 dias_date" id="floatingSelectGrid4" required>
                 <option ></option>
-                <option value="1">Janeiro</option>
-                <option value="2">Fevereiro</option>
-                <option value="3">Março</option>
-                <option value="4">Abril</option>
-                <option value="5">Maio</option>
-                <option value="6">Junho</option>
-                <option value="7">Julho</option>
-                <option value="8">Agosto</option>
-                <option value="9">Setembro</option>
-                <option value="10">Outubro</option>
-                <option value="11">Novembro</option>
-                <option value="12">Dezembro</option>
               </select>
-            </div >
+            
             
             <div class="form-floating w-100" required>
-                <select class="form-select ano_date" id="floatingSelectGrid" required >
-                  <option></option>
+                <select class="form-select mes_date" id="floatingSelectGrid" required >
+                  <option ></option>
+                  <option value="1">Janeiro</option>
+                  <option value="2">Fevereiro</option>
+                  <option value="3">Março</option>
+                  <option value="4">Abril</option>
+                  <option value="5">Maio</option>
+                  <option value="6">Junho</option>
+                  <option value="7">Julho</option>
+                  <option value="8">Agosto</option>
+                  <option value="9">Setembro</option>
+                  <option value="10">Outubro</option>
+                  <option value="11">Novembro</option>
+                  <option value="12">Dezembro</option>
+                </select>
+              
                 </select>
             </div>
           </div>
 
+          <div class="form-floating w-50" required>
+            <select class="form-select anos_date" id="floatingSelectGrid4" required >
+              <option></option>
+            </select>
+        </div>
+      </div>
+    
 
-        <button type="submit" class="btn btn-primary w-100">Se Inscrever</button>
+        <button type="submit" class="botao btn btn-danger w-100">Se Inscrever</button>
       </form>
     </div>
-            
-       
-           
+                     
         </div>
     </div>
-          
-         
-
     </div>
 <script src="code.js"></script>
 </body>
