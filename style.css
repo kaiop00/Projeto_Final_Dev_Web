@@ -18,6 +18,9 @@ body{
     border-radius: 5px;
 
 }
+.menu{
+    padding-top: 20px;
+}
 .imagem01{
     padding-top: 40px;
     display:inline-block;vertical-align:top;
