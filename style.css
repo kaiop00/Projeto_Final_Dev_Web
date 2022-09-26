@@ -16,7 +16,6 @@ body{
     text-decoration: underline;  
     background-color: brown;
     border-radius: 5px;
-
 }
 .menu{
     padding-top: 20px;
@@ -43,4 +42,8 @@ h3{
 
 .botao{
     margin-top: 10px;
+}
+
+.imagemqxd{
+    justify-content: left;
 }
