@@ -33,15 +33,11 @@ body{
 .forms{
     opacity : 0.3;
 }
-p{
-    padding-top: 50px;
-}
+
 h3{
     padding-top: 100px;
 }
-h2{
-    padding-top: 25px;
-}
+
 .botao{
     margin-top: 10px;
 }
