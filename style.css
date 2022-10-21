@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html, body{
         justify-content: center;
         align-items: center; 
@@ -9,44 +10,79 @@ html, body{
     }
 
 .navlink a{
+=======
+body {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-family: 'poppins', 'sans-serif';
+    background: linear-gradient(-45deg, black, silver, white);
+}
+
+.navlink a {
+>>>>>>> 07f41a0a71fdd2b85c0dc0a18103ad04b7b465f7
     text-decoration: none;
-    color:  rgb(15, 20, 25);
+    color: rgb(15, 20, 25);
     margin-right: 150px;
 }
+<<<<<<< HEAD
 a{
     text-decoration: none;
 }
 .navlink a:hover{
     text-decoration: underline;  
+=======
+
+.navlink a:hover {
+    text-decoration: underline;
+>>>>>>> 07f41a0a71fdd2b85c0dc0a18103ad04b7b465f7
     background-color: brown;
     border-radius: 5px;
+
 }
+<<<<<<< HEAD
 /* .menu{
     padding-top: 20px;
 } */
 .imagem01{
-    padding-top: 40px;
-    display:inline-block;vertical-align:top;
+=======
+
+.menu {
+    padding-top: 20px;
 }
-.text_{
-    display:inline-block;
+
+.imagem01 {
+>>>>>>> 07f41a0a71fdd2b85c0dc0a18103ad04b7b465f7
+    padding-top: 40px;
+    padding-left: 25px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.text_ {
+    display: inline-block;
     padding-top: 60px;
     padding-left: 50px;
 }
-.texto1{
+
+.texto1 {
     padding-top: 60px;
 }
-.forms{
-    opacity : 0.3;
+
+.forms {
+    opacity: 0.3;
 }
 
-h3{
+h3 {
     padding-top: 100px;
+
 }
 
-.botao{
+.botao {
     margin-top: 10px;
 }
+<<<<<<< HEAD
 
 .comod button{
     justify-content: end;
@@ -63,3 +99,5 @@ h3{
 .card{
     max-width:300px;
 }
+=======
+>>>>>>> 07f41a0a71fdd2b85c0dc0a18103ad04b7b465f7
