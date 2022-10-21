@@ -1,10 +1,11 @@
-body{
+html, body{
         justify-content: center;
         align-items: center; 
         width: 100%;
         height: 100vh;
         font-family: 'poppins','sans-serif';
-        background: linear-gradient(-45deg, black, silver, white) ;   
+        background: linear-gradient(-45deg, black, silver, white) ; 
+        min-height: 100vh;  
     }
 
 .navlink a{
@@ -12,14 +13,17 @@ body{
     color:  rgb(15, 20, 25);
     margin-right: 150px;
 }
+a{
+    text-decoration: none;
+}
 .navlink a:hover{
     text-decoration: underline;  
     background-color: brown;
     border-radius: 5px;
 }
-.menu{
+/* .menu{
     padding-top: 20px;
-}
+} */
 .imagem01{
     padding-top: 40px;
     display:inline-block;vertical-align:top;
@@ -44,6 +48,18 @@ h3{
     margin-top: 10px;
 }
 
-.imagemqxd{
-    justify-content: left;
+.comod button{
+    justify-content: end;
+}
+
+.img-card {
+    height: 250px;
+    width:250px;
+}
+.btnmsg{
+    border-radius: 25px;
+}
+
+.card{
+    max-width:300px;
 }
