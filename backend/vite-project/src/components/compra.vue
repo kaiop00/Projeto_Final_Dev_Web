@@ -1,8 +1,6 @@
 <template>
 
-<div class="container">
-        <div class="row">
-            <div class="navegacao">
+
                 <div>
                     <a href="home.html"> <img src="WhatsApp_Image_2022-09-26_at_13.52.22-removebg-preview.png"
                             width="100" height="70"> </a>

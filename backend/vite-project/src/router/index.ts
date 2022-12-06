@@ -1,5 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+
+import home from "../views/home.vue"
+import alugar from "../views/alugar.vue"
+import anunciar from "../views/anunciar.vue"
+import comprar from "../views/comprar.vue"
+import inscricao from "../views/inscricao.vue"
+import login from "../views/login.vue"
+import reserva from "../views/reserva.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -8,33 +15,38 @@ const router = createRouter({
     {
       path: "/home",
       name: "home",
-      component: HomeView,
+      component: home,
     },
     {
       path: "/alugar",
       name: "alugar",
-      component: HomeView,
+      component: alugar,
     },
 
     {
       path: "/login",
       name: "login",
-      component: HomeView,
+      component: login,
     },
     {
       path: "/compra",
       name: "compra",
-      component: HomeView,
+      component: comprar,
     },
     {
       path: "/anunciar",
       name: "anunciar",
-      component:HomeView,
+      component:anunciar,
+    },
+    {
+      path: "/inscricao",
+      name: "inscricao",
+      component:inscricao,
     },
     {
       path: "/reserva",
       name: "reserva",
-      component: HomeView,
+      component: reserva,
     },
   ],
 });

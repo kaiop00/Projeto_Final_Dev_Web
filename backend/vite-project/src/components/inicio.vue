@@ -1,39 +1,5 @@
 <template>
 
-<div class="container">
-        <div class="row">
-            <div class="navegacao">
-                <div>
-                    <a href="home.html"> <img src="WhatsApp_Image_2022-09-26_at_13.52.22-removebg-preview.png"
-                            width="100" height="70"> </a>
-                </div>
-                <div class="navlink d-flex justify-content-end">
-
-                    <div class="navlink">
-                        <a href="comprar.html"> Comprar</a>
-                    </div>
-                    <div class="navlink">
-                        <a href="alugar.html"> Alugar</a>
-                    </div>
-                    <div class="navlink">
-                        <a href="reserva.html"> Fazer Reserva</a>
-                    </div>
-              
-
-                    <div class="linkbotao">
-                        
-                           <a href="anunciar.html">
-                            <button type="button" class="btn btn-dark">Anunciar</button>
-                        </a>
-                        <a href="login.html">
-                            <button type="button" class="btn btn-danger"><i class="bi bi-person-fill"></i>
-                                Entrar</button>
-                            </a>
-            
-                      
-                    </div>
-                </div>
-
                 <div class="imagem01">
                     <img src="AnderpsQuixada_005.jpeg" width="600" height="600"> </a>
                 </div>
@@ -81,30 +47,8 @@
             
 </template>
 <style>
-body{
-    justify-content: center;
-    align-items: center; 
-    font-family: 'poppins','sans-serif';
-    background: linear-gradient(-45deg, black, silver, white) ; 
-    min-height: 100vh;  
-}
 
-.navlink a{
-text-decoration: none;
-color:  rgb(15, 20, 25);
-margin-right: 150px;
-}
-a{
-text-decoration: none;
-}
-.navlink a:hover{
-text-decoration: underline;  
-background-color: brown;
-border-radius: 5px;
-}
-/* .menu{
-padding-top: 20px;
-} */
+
 .imagem01{
 padding-top: 40px;
 display:inline-block;vertical-align:top;
