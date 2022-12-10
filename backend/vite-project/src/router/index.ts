@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-
 import home from "../views/home.vue"
 import alugar from "../views/alugar.vue"
 import anunciar from "../views/anunciar.vue"
