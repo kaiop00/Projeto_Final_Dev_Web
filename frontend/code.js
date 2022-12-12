@@ -32,44 +32,44 @@ function criarano(){
 }criarano()
 
 
-// function criaranobi(){
-//   for(let i = 1950 ; i <= 2004 ; i++){
-//       if(i%4 === 0){
-//       $('.anos_date').append($('<option>', {
-//           value: i,
-//           text: i  
-//       }))
-//     }
-// }
-// }
+function criaranobi(){
+  for(let i = 1950 ; i <= 2004 ; i++){
+      if(i%4 === 0){
+      $('.anos_date').append($('<option>', {
+          value: i,
+          text: i  
+      }))
+    }
+}
+}
 
 
 
 
 
-// $(function(){
-//     $('.sim').click(function(){
-//       if ($(this).is(':checked'))
-//       {
-//         $('.btn').prop("disabled",false);
-//       }
-//     });
-//   });
+$(function(){
+    $('.sim').click(function(){
+      if ($(this).is(':checked'))
+      {
+        $('.btn').prop("disabled",false);
+      }
+    });
+  });
 
 
 
-// (function () {
+(function () {
 
-//     var forms = document.querySelectorAll('.needs-validation')
-//     Array.prototype.slice.call(forms)
-//       .forEach(function (form) {
-//         form.addEventListener('submit', function (event) {
-//           if (!form.checkValidity()) {
-//             event.preventDefault()
-//             event.stopPropagation()
-//           }
+    var forms = document.querySelectorAll('.needs-validation')
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
         
-//           form.classList.add('was-validated')
-//         }, false)
-//       })
-//   })()
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })()

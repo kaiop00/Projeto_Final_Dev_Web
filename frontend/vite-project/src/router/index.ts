@@ -6,15 +6,21 @@ import comprar from "../views/comprar.vue"
 import inscricao from "../views/inscricao.vue"
 import login from "../views/login.vue"
 import reserva from "../views/reserva.vue"
+import teste from "../views/teste.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
 
     {
-      path: "/home",
+      path: "/",
       name: "home",
       component: home,
+    },
+    {
+      path: "/teste",
+      name: "teste",
+      component: teste,
     },
     {
       path: "/alugar",
@@ -50,4 +56,5 @@ const router = createRouter({
   ],
 });
 
+// const router = new Router({routes})
 export default router;

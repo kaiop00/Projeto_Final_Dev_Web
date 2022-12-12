@@ -18,14 +18,14 @@
         </div>
       </div>
       <br>
-      <div class="form-floating">
+      <!-- <div class="form-floating"> -->
         <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required minlength="6">
         <label for="floatingPassword" class="form-label">Senha:</label>
         <div class="invalid-feedback">
           A senha deve conter no mínimo 6 caracteres
         </div>
         <br>
-        <div class="form-floating">
+        <!-- <div class="form-floating"> -->
           <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
           <label for="floatingPassword">Confirmar Senha:</label>
           <div class="invalid-feedback">
@@ -56,7 +56,7 @@
                   <option value="12">Dezembro</option>
                 </select>
 
-                </select>
+               
               </div>
             </div>
 
@@ -71,9 +71,6 @@
     </form>
   </div>
 
-  </div>
-  </div>
-  </div>
   <!-- <script src="code.js"></script> -->
 </template>
 
@@ -114,46 +111,46 @@ function criarano(){
 }criarano()
 
 
-// function criaranobi(){
-//   for(let i = 1950 ; i <= 2004 ; i++){
-//       if(i%4 === 0){
-//       $('.anos_date').append($('<option>', {
-//           value: i,
-//           text: i  
-//       }))
-//     }
-// }
-// }
+function criaranobi(){
+  for(let i = 1950 ; i <= 2004 ; i++){
+      if(i%4 === 0){
+      $('.anos_date').append($('<option>', {
+          value: i,
+          text: i  
+      }))
+    }
+}
+}
 
 
 
 
 
-// $(function(){
-//     $('.sim').click(function(){
-//       if ($(this).is(':checked'))
-//       {
-//         $('.btn').prop("disabled",false);
-//       }
-//     });
-//   });
+$(function(){
+    $('.sim').click(function(){
+      if ($(this).is(':checked'))
+      {
+        $('.btn').prop("disabled",false);
+      }
+    });
+  });
 
 
 
-// (function () {
+(function () {
 
-//     var forms = document.querySelectorAll('.needs-validation')
-//     Array.prototype.slice.call(forms)
-//       .forEach(function (form) {
-//         form.addEventListener('submit', function (event) {
-//           if (!form.checkValidity()) {
-//             event.preventDefault()
-//             event.stopPropagation()
-//           }
+    var forms = document.querySelectorAll('.needs-validation')
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
         
-//           form.classList.add('was-validated')
-//         }, false)
-//       })
-//   })()
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })()
 
 </script>

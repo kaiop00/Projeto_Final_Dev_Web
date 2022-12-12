@@ -44,9 +44,7 @@ import opcoes from "../components/opcoes.vue"
                   <div class="botaoanuncio">
                   <button type="button" class="btn btn-danger w-75 ">Alugar</button>
                 </div>
-            </div>
-        </div>
-    </div>
+          
 </template>
 
 <style>
