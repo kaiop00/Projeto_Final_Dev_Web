@@ -27,6 +27,7 @@ const router = createRouter({
       name: "alugar",
       component: alugar,
     },
+    
 
     {
       path: "/login",

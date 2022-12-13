@@ -1,4 +1,4 @@
-<script>
+<script setup lang="ts">
 import opcoes from "../components/opcoes.vue"
 
 </script>

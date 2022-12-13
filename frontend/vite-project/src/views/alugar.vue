@@ -1,7 +1,9 @@
-<script>
-import opcoes from "../components/opcoes.vue"
 
+<script setup lang="ts">
+
+import opcoes from "../components/opcoes.vue"
 </script>
+
 
 <template>
     <div class="btn-group btn-group-lg p-1 d-flex flex-row justify-content-center" role="group"

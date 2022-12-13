@@ -1,11 +1,16 @@
-import { createApp, h } from 'vue'
+import { createApp } from 'vue'
 import vue from 'vue'
 import router from './router'
 import './style.css'
 // import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
+const app = createApp(App)
 
-createApp(App).mount('#app')
+
+app.use(router)
+
+app.mount('#app')
+
 
 
 

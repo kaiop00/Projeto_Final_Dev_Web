@@ -1,3 +1,4 @@
+
 <template>
     <div class="container w-75">
     <H3>Criar Conta</H3>
@@ -18,14 +19,14 @@
         </div>
       </div>
       <br>
-      <!-- <div class="form-floating"> -->
+
         <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required minlength="6">
         <label for="floatingPassword" class="form-label">Senha:</label>
         <div class="invalid-feedback">
           A senha deve conter no mínimo 6 caracteres
         </div>
         <br>
-        <!-- <div class="form-floating"> -->
+       
           <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
           <label for="floatingPassword">Confirmar Senha:</label>
           <div class="invalid-feedback">
@@ -74,8 +75,8 @@
   <!-- <script src="code.js"></script> -->
 </template>
 
+<script setup lang>
 
-<script>
 
 function criardias(){
   for(let i = 1 ; i <= 31 ; i++){

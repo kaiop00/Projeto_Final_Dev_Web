@@ -28,7 +28,7 @@
                 </div>
 
                 <div class="imagem01">
-                    <img src="AnderpsQuixada_005.jpeg" width="600" height="600"> </a>
+                    <img src="AnderpsQuixada_005.jpeg" width="600" height="600"> 
                 </div>
                 <div class="text_">
                     <h2>o que deseja comprar ?</h2>
@@ -78,10 +78,7 @@
                     </div>
 
                 </div>
-            </div>
-        </div>
-    </div>
-    </div>
+        
 </template>
 
 <style>

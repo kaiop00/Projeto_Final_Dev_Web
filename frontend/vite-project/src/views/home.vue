@@ -1,21 +1,9 @@
- <!-- inicio + menu 
+  <!-- inicio + menu  -->
 
-<script>
-import menu from "../components/menu.vue"
-import inicio from "../components/inicio.vue"
+<script setup lang="ts">
+// import {RouterLink, RouterView} from 'vue-router'
 
-
-export default {
-    name: "home",
-    components: {
-        menu,
-        inicio,
-        
-    },
-};
-
-
-</script> -->
+</script> 
 
 
 <template>
@@ -27,6 +15,7 @@ export default {
     <div class="navlink d-flex justify-content-end">
   
       <div class="navlink">
+        <RouterLink to="/comprar"></RouterLink>
         <a href="comprar.html"> Comprar</a>
       </div>
       <div class="navlink">
@@ -52,7 +41,7 @@ export default {
     </div>
   
     <div class="imagem01">
-      <img src="AnderpsQuixada_005.jpeg" width="600" height="600">
+      <img src="./ass" width="600" height="600">
     </div>
     <div class="text_">
       <h2>Pronto para procurar um imóvel para você?</h2>
@@ -88,7 +77,7 @@ export default {
           <button class="btn btn-danger" type="button"><i class="bi bi-search"></i> Buscar</button>
         </div>
       </div>
-  
+      <RouterView></RouterView>
     </div>
   
   
