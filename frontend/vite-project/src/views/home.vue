@@ -107,7 +107,7 @@
   
   .navlink a:hover {
     text-decoration: underline;
-    background-color: brown;
+    /* background-color: brown; */
     border-radius: 5px;
   }
   

@@ -1,11 +1,10 @@
 <template>
-
-  <div class id="app"> </div>
     <div>
        <a href="home.html"> <img src="WhatsApp_Image_2022-09-26_at_13.52.22-removebg-preview.png" width="100"
             height="70"> </a> 
     </div>
     <div class="navlink d-flex justify-content-end">
+      
   
       <div class="navlink">
         <a href="comprar.html"> Comprar</a>
@@ -96,7 +95,7 @@
   }
   .navlink a:hover {
     text-decoration: underline;
-    background-color: brown;
+    
     border-radius: 5px;
   }
   .imagem01 {
