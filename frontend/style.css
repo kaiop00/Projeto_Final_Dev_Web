@@ -79,3 +79,6 @@ max-width:300px;
 .chk input:checked + span {
     background-color: #c03;
 }
+.anuncios{
+    padding-top: 50px;
+}
