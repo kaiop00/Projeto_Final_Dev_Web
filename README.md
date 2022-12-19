@@ -18,31 +18,27 @@ Adicionar apartamento, remover apartamento, editar apartamento, listar apartamen
 
 ## :triangular_flag_on_post:	 Principais funcionalidades da aplicação
 
-Adicionar apartamento, remover apartamento, editar apartamento, alocar apartamento. O usuario sem estar logado ele tem acesso ao feed de possibilidades porem so consegue alocar um apartamento se estiver um login valigo. E um email nomeado como administrador que tera acesso a todas as informações  do sistema, para possiveis manutenções.
+Adicionar apartamento, remover apartamento, editar apartamento, alocar apartamento. O usuario sem estar logado ele tem acesso ao feed de possibilidades porém só consegue alocar um apartamento se estiver um login valigo. E um email nomeado como administrador que tera acesso a todas as informações  do sistema, para possíveis manutenções.
 
 ----
 
 ## :desktop_computer: Tecnologias e frameworks utilizados
 
-**Frontend:**
-
-Lista as tecnologias, frameworks e bibliotecas utilizados.
-
-**Backend:**
-
-Lista as tecnologias, frameworks e bibliotecas utilizados.
+**Frontend:** Vue.js - CSS - HTML
+**Backend:** node.js - Strapi - JavaScript 
 
 
 ## :shipit: Operações implementadas para cada entidade da aplicação
 
+Administrador, Locador, Locatario, Usuário Logado/não logado - Apartamento
 
-| Entidade| Criação | Leitura | Atualização | Remoção |
-| --- | --- | --- | --- | --- |
-| Entidade 1 | X |  X  |  | X |
-| Entidade 2 | X |    |  X | X |
-| Entidade 3 | X |    |  |  |
-
-> Lembre-se que é necessário implementar o CRUD de pelo menos duas entidades.
+| Entidade  | Criação | Leitura | Atualização | Remoção |
+| --- | ---     | --- | --- | --- |
+| Administrador | X |  X  | X  | X |
+| Locador       |   |  X  |    |   |
+| Locatário     | X |     | X  | X |
+| User Logado   |   |  x  |    |   |
+| User N/Logado |   |  X  |    |   |
 
 ## :neckbeard: Rotas da API REST utilizadas
 
