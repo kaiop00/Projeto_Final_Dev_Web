@@ -1,16 +1,41 @@
 <script setup lang="ts"> 
-  import { RouterLink} from 'vue-router'
+
+import { onMounted, ref } from "vue";
+import { useRouter } from "vue-router";
+import api from "../App.vue";
+import { RouterLink} from 'vue-router'
+
+const register_form = ref({});
+const router = useRouter();
+async function login(){
+  console.log(register_form.value.email);
+  
+   try {
+      const response = await api.post("/auth/local/", {
+        identifier: register_form.value.email,
+        password: register_form.value.password,
+      });
+      if(response.data) {
+        router.push({path: "/home"});
+        return true;
+      }
+      return false;
+} catch (error) {
+      alert("Usuário ou senha incorretos");
+    }
+}
 </script>
+
 
 <template >
   <div class="flex-fill">
-    <nav class=" justify-content-center ">
+    <nav class=" justify-content-center">
       <div>
         <RouterLink to="/" ><img src="../assets/logoAluga.png" alt="Logo da empresa de aluga" width="100" height="70"></RouterLink>
       </div>  
     </nav>
 
-    <div class=" container ">
+    <div class=" container w-50 ">
       
       <div class=" d-flex justify-content-center ">
         <h3>Entre agora mesmo!</h3>

@@ -4,12 +4,13 @@ import { RouterLink} from 'vue-router'
 
 <template>
   <div class="flex-fill">
-    <nav class="navlink d-flex justify-content-center">
-      <div>
+    <div>
         <RouterLink to="/" ><img src="../assets/logoAluga.png" width="100"
             height="70"></RouterLink>
         
       </div>  
+    <nav class="navlink d-flex justify-content-end">
+  
   
       <div class="navlink">
         <a href="comprar.html"> Comprar</a>
