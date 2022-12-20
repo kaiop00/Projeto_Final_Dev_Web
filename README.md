@@ -6,7 +6,7 @@ Para realização do trabalho final foi pensado em desenvolver uma plataforma qu
 ## :technologist: Membros da equipe
 
 Antonio Kaio Elias Portela- 495707- Engenharia de Software || 
-Marcos Vinicius de Sousa Lima- 473259- Engenharia da Computação 
+Petrucio de Carvalho Neves Silva- 469854- Engenharia da Computação 
 
 ## :people_holding_hands: Papéis ou tipos de usuário da aplicação
 
