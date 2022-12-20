@@ -46,3 +46,4 @@ Administrador, Locador, Locatario, Usuário Logado/não logado - Apartamento
 | --- | --- |
 | GET | api/entidade1/|
 | POST | api/entidade2 |
+
