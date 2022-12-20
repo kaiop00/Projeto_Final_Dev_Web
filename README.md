@@ -28,6 +28,7 @@ Adicionar apartamento, remover apartamento, editar apartamento, alocar apartamen
 **Backend:** node.js - Strapi - JavaScript 
 
 
+
 ## :shipit: Operações implementadas para cada entidade da aplicação
 
 Administrador, Locador, Locatario, Usuário Logado/não logado - Apartamento
