@@ -5,6 +5,9 @@ import AlugarView from '../views/alugar.vue'
 import ReservaView from '../views/reserva.vue'
 import LoginView from '../views/login.vue'
 import InscricaoView from '../views/inscricao.vue'
+import AdminView from '../views/admin.vue'
+import Page403 from '../views/Page403.vue'
+import Page404 from '../views/Page404.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,6 +16,12 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: AdminView,
+      meta: { requiresAdmin: true }
     },
     {
       path: '/anunciar',
@@ -38,7 +47,17 @@ const router = createRouter({
       path: '/inscricao',
       name: 'inscricao',
       component: InscricaoView
-    }
+    },
+    {
+      path: '/forbiden',
+      name: 'forbiden',
+      component: Page403,
+    },
+    {
+      path: '/notfound',
+      name: 'notfound',
+      component: Page404,
+    },
 
   ]
 })

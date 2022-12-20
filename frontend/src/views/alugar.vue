@@ -8,8 +8,8 @@
   <nav class="navlink d-flex justify-content-center">
       <div>
         <RouterLink to="/" ><img src="../assets/logoAluga.png" width="100"
-            height="70">
-        </RouterLink>
+            height="70"></RouterLink>
+        
       </div>  
   
       <div class="navlink">

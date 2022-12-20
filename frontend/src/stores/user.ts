@@ -1,8 +1,13 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 import { api } from '../baseConfig'
-import { ApplicationError ,getAppError, isApplicationError } from '../mixing/errorMessageMixing'
+import { getAppError, isApplicationError} from '../mixing/errorMessageMixing'
 
+interface ApplicationError {
+  name: string,
+  message: string,
+  details?: string,
+}
 interface User {
   jwt: string,
   id: number,
@@ -33,8 +38,11 @@ export const userStore = defineStore('user', () => {
         email: data.user.email,
         role: ""
       }
+      console.log("passou aqui")
       const userRole = await getRole()
+      console.log("oioioi")
       if(isApplicationError(userRole)) throw userRole
+      
       user.value.role = userRole
       return user.value
     } catch(error) {
@@ -47,6 +55,9 @@ export const userStore = defineStore('user', () => {
       const res = await api.get("/users/me", {
         headers : {
           Authorization: `Bearer ${user.value.jwt}`
+        },
+        params: {
+          populate: "role",
         },
       })
       const { data } = res

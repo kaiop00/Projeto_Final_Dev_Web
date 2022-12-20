@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts">
 import { RouterLink} from 'vue-router'
 </script>
 
@@ -27,7 +27,7 @@ import { RouterLink} from 'vue-router'
         
         <RouterLink to="/login">
           <button type="button" class="btn btn-danger"><i class="bi bi-person-fill"></i>
-            Entrar</button>
+            Logado</button>
         </RouterLink>
   
   

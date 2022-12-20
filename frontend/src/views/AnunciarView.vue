@@ -25,7 +25,6 @@
         </RouterLink>
       </div>
     </nav>
-
     <div class="container w-50">
       <h3 class="texto d-flex justify-content-center">Anuncie seu Imóvel Agora Mesmo!</h3>
       <form class="form-floating mb-3 m-3 was-validated needs-validation" >
