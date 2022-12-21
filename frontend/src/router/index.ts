@@ -2,10 +2,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AnunciarView from '../views/AnunciarView.vue'
 import AlugarView from '../views/alugar.vue'
-import ReservaView from '../views/reserva.vue'
+import ReservaView from '../views/alugar.vue'
 import LoginView from '../views/login.vue'
 import InscricaoView from '../views/inscricao.vue'
-import AdminView from '../views/admin.vue'
+import ImovelDetail from '../views/ImovelDetalhes.vue'
 import Page403 from '../views/Page403.vue'
 import Page404 from '../views/Page404.vue'
 
@@ -18,10 +18,9 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/admin',
-      name: 'admin',
-      component: AdminView,
-      meta: { requiresAdmin: true }
+      path: '/imovels/:id',
+      name: 'imovel',
+      component: ImovelDetail
     },
     {
       path: '/anunciar',

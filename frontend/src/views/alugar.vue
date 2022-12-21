@@ -1,12 +1,40 @@
 
 <script setup lang="ts">
   import { RouterLink } from 'vue-router';
+  import { onMounted, ref } from 'vue';
+  import ImovelCard from '../components/imovelCard.vue'
+  import { api } from '../baseConfig'
+  interface Cover {
+    url: string,
+    formats: object
+  }
+  interface Imovel {
+    id: number,
+    cover: Cover
+    rua: string,
+    bairro: string,
+    description: string,
+    number: number,
+    price: number,
+    telefone: number
+  }
+  const imoveis = ref<Imovel[]>([]);
+    onMounted( async () => {
+    const data  = await api.get("/imovels", {
+      params: {
+        populate: "cover"
+      }
+    })
+    imoveis.value = data.data
+  })
+  
 </script>
 
 
 <template>
-  <nav class="navlink d-flex justify-content-center">
-      <div>
+  <div class="flex-fill">
+    <nav class="navlink d-flex justify-content-center">
+      <div >
         <RouterLink to="/" ><img src="../assets/logoAluga.png" width="100"
             height="70"></RouterLink>
         
@@ -33,70 +61,39 @@
   
   
       </div>
-  </nav>
-  
-  
-  <div class="d-flex flex-column justify-content-center">
-    
-    
-    
+    </nav>
 
-    <button type="button" class="btn btn-danger" >Anunciar</button>
-    
-    <div class="container ">
-      <div class="card mb-3" style="max-width: 750px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="apt1.webp" class="img-card" alt="apartamento 1">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">RS 800<span>/mês</span></h5>
-              <p class="card-text">STUDIO COM VARANDA GOURMET NA BELA VISTA APTO tipo Studio, com 40 m2 área útil. Próximo ao Shopping Frei Caneca, Mackenzie, FGV, Hospital Sírio Libanês, Hospital 9 de Julho, etc...</p>
-              <p class="card-text"><small class="text-muted">Rua Paim, Bela Vista </small></p>
-              <a href="">Ver mais detalhes</a>
-              <button type="button" class="btnmsg btn btn-outline-dark">Mensagem</button>
-            </div>
-          </div>
+
+    <div class=" flex-column justify-content-center flex-fill">
+      <div >
+        <div >
+            <ImovelCard   v-for="imovel in imoveis" :key="imovel.id"
+            :id="imovel.id"
+            :cover="imovel.cover.url"
+            :description="imovel.description"
+            :price="imovel.price"
+            :number="imovel.number"
+            :telefone="imovel.telefone"
+            :rua="imovel.rua"
+            :bairro="imovel.bairro"
+            >
+          </ImovelCard>
         </div>
       </div>
-      <div class="card mb-3" style="max-width: 750px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="apt2.jpg" class="img-card" alt="apartamento 2">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">RS 2.000<span>/mês</span></h5>
-              <p class="card-text">Galpão, 2.300 m², Fortaleza, Paupina, grande Messejana. Acesso fácil, na entrada da cidade, menos de 1 km do Quarto Anel Viário, 100 mts da BR-116. Crossdocking, cabe até 2 caminhões...</p>
-              <p class="card-text"><small class="text-muted">Rua Guarani, Paupina</small></p>
-              <a href="">Ver mais detalhes</a>
-              <button type="button" class="btnmsg btn btn-outline-dark">Mensagem</button>
-            </div>
-          </div>
-        </div>                
-      </div>
-    </div>
-    <div class=" d-flex">
-      <button type="button" class="btn btn-danger flex-fill">Alugar</button>
     </div>
   </div>
 </template>
 
 <style scoped>
+  .navlink a {
+    text-decoration: none;
+    color: rgb(15, 20, 25);
+    margin-right: 150px;
+  }
+  .navlink a:hover {
+    text-decoration: underline;
+    
+    border-radius: 5px;
+  }
 
-.img-card {
-height: 250px;
-width:250px;
-}
-.btnmsg{
-border-radius: 25px;
-}
-
-.card{
-max-width:300px;
-}
-.botaoanuncio{
-    padding-left: 70px;
-}
 </style>
