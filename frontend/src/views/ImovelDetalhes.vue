@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, watch, watchEffect } from 'vue'
 import { useRoute } from 'vue-router'
 import { api } from '../baseConfig'
 import { coverURL} from '../mixing/uploadUtil'
@@ -8,55 +8,51 @@ interface Cover {
   alternativeText: string,
   url: string
 }
-interface Imovel {
+interface Apartment {
   id: number,
-  cover: Cover
-  title: string,
-  summary: string,
-  number: number,
-  price: number
-  comments: Comment[]
+  photos: Cover,
+  description: string,
+  value: number,
+  rented: boolean,
+  address: string,
 }
 const route = useRoute()
 const id = route.params.id
-const imovel = ref<Imovel>({} as Imovel)
+let apartment = ref<Apartment>()
 onMounted( async () => {
-  const response = await api.get(`/imovels/${id}`, {
+  const response = await api.get(`/apartments/${id}`, {
     params: {
-      populate: "cover, comments",
+      populate: "photos",
     }
   })
-  const { data } = response
-  imovel.value = data.data
+  apartment = response.data.data
+  console.log('apartment', apartment)
 })
 </script>
 
 <template>
-    <template v-if="imovel.cover">
-      <div class="row align-items-center" >
-        <div class="col">
-            <div class="card mb-3">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img  :src="coverURL(imovel.cover.url)" class="w-75 rounded-start" :alt="imovel.cover.alternativeText">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">{{imovel.title}}</h5>
-                            <hr>
-                            <div class="text-start">
-                                <p class="card-text">Volume: {{imovel.number}}</p>
-                                <p class="card-text"><strong>Preço: <small class="text-danger">{{imovel.price}}</small></strong></p>
-                            </div>
+  <div class="row align-items-center d-flex flex-fill" v-if="apartment !== null">
+    <div class="col">
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img  :src="coverURL(apartment?.attributes.photos.data.attributes.url)" class="w-75 rounded-start" >
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{apartment?.attributes.description}}</h5>
+                        <hr>
+                        <div class="card-subtitle">{{ apartment?.attributes.address }}</div>
+                        <div class="text-start">
+                            <p class="card-text"><strong>Preço: <small class="text-danger">{{apartment?.attributes.value}}</small></strong></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-      </div>
-      <CommentContainer :comments="imovel.comments"></CommentContainer>
-    </template>
-    <div v-else>
-      <h1>Carregando</h1>
     </div>
+  </div>
+  <div v-else>
+    <h1>Carregando</h1>
+  </div>
 </template>

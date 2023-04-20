@@ -8,24 +8,23 @@
     url: string,
     formats: object
   }
-  interface Imovel {
+  interface Apartment {
     id: number,
-    cover: Cover
-    rua: string,
-    bairro: string,
+    photos: Cover,
     description: string,
-    number: number,
-    price: number,
-    telefone: number
+    value: number,
+    rented: boolean,
+    address: string,
   }
-  const imoveis = ref<Imovel[]>([]);
+  let apartments = ref<Apartment[]>();
     onMounted( async () => {
-    const data  = await api.get("/imovels", {
+    const data  = await api.get("/apartments", {
       params: {
-        populate: "cover"
+        populate: "photos"
       }
     })
-    imoveis.value = data.data
+    apartments = data.data.data
+    console.log('data', apartments);
   })
   
 </script>
@@ -66,19 +65,15 @@
 
     <div class=" flex-column justify-content-center flex-fill">
       <div >
-        <div >
-            <ImovelCard   v-for="imovel in imoveis" :key="imovel.id"
-            :id="imovel.id"
-            :cover="imovel.cover.url"
-            :description="imovel.description"
-            :price="imovel.price"
-            :number="imovel.number"
-            :telefone="imovel.telefone"
-            :rua="imovel.rua"
-            :bairro="imovel.bairro"
-            >
-          </ImovelCard>
-        </div>
+          <ImovelCard  v-for="apartment in apartments" :key="apartment.id"
+          :id="apartment.id"
+          :cover="apartment.attributes.photos.url"
+          :description="apartment.attributes.description"
+          :value="apartment.attributes.value"
+          :photos="apartment.attributes.photos?.data?.attributes.url"
+          :address="apartment.attributes.address"
+          >
+        </ImovelCard>
       </div>
     </div>
   </div>

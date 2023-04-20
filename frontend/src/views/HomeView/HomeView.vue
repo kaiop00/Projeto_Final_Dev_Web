@@ -6,7 +6,7 @@ import { RouterLink} from 'vue-router'
   <div class="flex-fill">
     <nav class="navlink d-flex justify-content-center">
       <div>
-        <RouterLink to="/" ><img src="../assets/logoAluga.png" width="100"
+        <RouterLink to="/" ><img src="../../assets/logoAluga.png" width="100"
             height="70"></RouterLink>
         
       </div>  
@@ -37,7 +37,7 @@ import { RouterLink} from 'vue-router'
 
   <div  class="d-flex justify-content-between">
     <div class="imagem01">
-      <img src="../assets/AnderpsQuixada_005.jpeg" width="600" height="600">
+      <img src="../../assets/AnderpsQuixada_005.jpeg" width="600" height="600">
     </div>
     <div class="text_">
       <h2>Pronto para procurar um imóvel para você?</h2>
