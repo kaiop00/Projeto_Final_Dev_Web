@@ -20,6 +20,8 @@
             console.log('data', data);
             auth.setToken(data.jwt);
             auth.setuser(data.user);
+            
+            console.log(router.push({path: '/'}));
             // if(data) {
             //     router.push({path: "/"});
             //     return true;

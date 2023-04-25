@@ -41,8 +41,9 @@ const router = createRouter({
   ]
 })
 router.beforeEach(async (to, from, next) => {
+  const auth = userAuth();
   if(to.meta?.auth) {
-    const auth = userAuth();
+    
     if (auth.token && auth.user){
       // const isAuthenticated = await auth.checkToken();
       // if(isAuthenticated) {
@@ -51,7 +52,6 @@ router.beforeEach(async (to, from, next) => {
     }else{
       next({name: 'login'});
     }
-    console.log(to.name)
   }else{
     next();
   }
