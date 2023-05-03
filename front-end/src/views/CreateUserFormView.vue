@@ -3,6 +3,7 @@ import { RouterLink } from 'vue-router';
 import { reactive, ref } from 'vue';
 import { api } from '@/service/http';
 import { userAuth } from '@/stores/userAuthStore';
+import { useRouter } from "vue-router";
 
 const validated = ref(false)
 const form = reactive({
@@ -15,6 +16,7 @@ const form = reactive({
 const validationMessage = ref("")
 const auth = userAuth();
 
+const router = useRouter();
 function verificar(){
   if(form.password != form.password2){
     validationMessage.value = "Senhas diferentes"
@@ -43,6 +45,7 @@ async function createUser() {
         const { data } = await api.post("/auth/local/register", parsedData);
         auth.setToken(data.jwt);
         auth.setuser(data.user);
+        router.push({path: '/'});
 
     } catch (error) {
         console.log(error);
@@ -53,17 +56,6 @@ async function createUser() {
 
 <template>
   <div class=" flex-fill">
-    <nav class="navlink d-flex justify-content-between">
-      <div class="flex-fill">
-        <RouterLink to="/" ><img src="../assets/logoAluga.png" width="100" height="70"></RouterLink>
-      </div> 
-      <div class="linkbotao flex-fill">
-        <RouterLink to="/login">
-          <button type="button" class="btn btn-danger">Voltar</button>
-        </RouterLink>
-      </div>
-    </nav>
-
     <div class="container w-75">
       <h3>Criar Conta</h3>
       <div class="alert alert-danger" v-if="validationMessage" role="alert">

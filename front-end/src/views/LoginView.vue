@@ -21,7 +21,7 @@
             auth.setToken(data.jwt);
             auth.setuser(data.user);
             
-            console.log(router.push({path: '/'}));
+            router.push({path: '/'});
             // if(data) {
             //     router.push({path: "/"});
             //     return true;
@@ -36,12 +36,6 @@
 
 <template >
   <div class="flex-fill">
-    <nav class=" justify-content-center ">
-      <div>
-        <RouterLink to="/" ><img src="../assets/logoAluga.png" alt="Logo da empresa de aluga" width="100" height="70"></RouterLink>
-      </div>  
-    </nav>
-
     <div class=" container ">
       
       <div class=" d-flex justify-content-center ">

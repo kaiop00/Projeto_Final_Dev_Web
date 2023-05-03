@@ -42,13 +42,17 @@ const router = createRouter({
 })
 router.beforeEach(async (to, from, next) => {
   const auth = userAuth();
-  if(to.meta?.auth) {
-    
+  console.log(auth.user)
+  if(to.meta?.auth && auth) {
+    console.log('entrou')
     if (auth.token && auth.user){
-      // const isAuthenticated = await auth.checkToken();
-      // if(isAuthenticated) {
+      const isAuthenticated = await auth.validate();
+      if(isAuthenticated) {
         next()
-      // }
+      }
+      else{
+        next({name: 'login'});
+      }
     }else{
       next({name: 'login'});
     }

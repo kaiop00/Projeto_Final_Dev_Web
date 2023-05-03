@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import { userAuth } from './stores/userAuthStore';
+const user = userAuth();
+function logout(){
+  user.clear();
+}
 </script>
 
 <template>
@@ -20,16 +25,24 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/reserva">Fazer Reserva</RouterLink>
       </div>
 
-
-      <div class="linkbotao">
+      <div  v-if="user.user" class="linkbotao">
+        <RouterLink to="/login">
+          <button type="button" class="btn btn-red">
+            <img src="@/assets/user.png" width="30" height="30" alt="img de usuario logado">
+          </button>
+          <div>
+            <p>Bem vindo, {{ user.user.username }}</p>
+            <button type="button" @click="logout()" id="logout"><i class="bi bi-box-arrow-right" ></i></button>
+          </div>
+        </RouterLink>
+      </div>
+      <div v-else class="linkbotao">
         <RouterLink to="/anunciar"><button type="button" class="btn btn-dark">Anunciar</button></RouterLink>
         
         <RouterLink to="/login">
           <button type="button" class="btn btn-danger"><i class="bi bi-person-fill"></i>
             Entrar</button>
         </RouterLink>
-
-
       </div>
     </nav>
 
@@ -48,5 +61,12 @@ import { RouterLink, RouterView } from 'vue-router'
     text-decoration: underline;
     
     border-radius: 5px;
+  }
+  p{
+    color: black;
+  }
+  #logout{
+    background-color: red;
+    justify-content: center;
   }
 </style>
