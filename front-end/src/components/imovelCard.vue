@@ -5,7 +5,7 @@ defineProps<{
   id: number,
   photos: string,
   description: string,
-  value: number,
+  value: string,
   address: string,
 }>()
 </script>
@@ -15,7 +15,7 @@ defineProps<{
       <router-link :to="'/imovels/' + id">
       <div class="card shadow-sm d-flex flex-row">
         <div class="col-md-4">
-          <img class="bd-placeholder-img card-img-top w-75" :src="coverURL(photos)"   />
+          <img class="bd-placeholder-img card-img-top w-75" :src="photos"   />
         </div>
         <div class="card-body text-center">
             <h5 class="card-title">{{description}}</h5>

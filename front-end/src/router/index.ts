@@ -4,7 +4,7 @@ import LoginView from '@/views/LoginView.vue'
 import { userAuth } from '@/stores/userAuthStore'
 import AlugarView from '@/views/AlugarView.vue'
 import CreateUserFormView from '@/views/CreateUserFormView.vue'
-
+import AboutView from '@/views/AboutView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,8 +20,7 @@ const router = createRouter({
     {
       path: '/about',
       name: 'about',
-      
-      component: () => import('../views/AboutView.vue')
+      component: AboutView
     },
     {
       path: '/login',
@@ -42,9 +41,7 @@ const router = createRouter({
 })
 router.beforeEach(async (to, from, next) => {
   const auth = userAuth();
-  console.log(auth.user)
   if(to.meta?.auth && auth) {
-    console.log('entrou')
     if (auth.token && auth.user){
       const isAuthenticated = await auth.validate();
       if(isAuthenticated) {
