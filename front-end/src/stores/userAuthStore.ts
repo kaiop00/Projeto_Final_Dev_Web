@@ -29,6 +29,19 @@ export const userAuth = defineStore('auth', () => {
       console.log(error);
     }
   }
+  async function updateUser(email: string, password: string){
+    try {
+      const { data } = await api.post("/auth/local/", {
+        identifier: email,
+        password: password,
+      });
+      console.log('data', data);
+      setToken(data.jwt);
+      setuser(data.user);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   function clear(){
     localStorage.removeItem('token')
@@ -42,6 +55,7 @@ export const userAuth = defineStore('auth', () => {
     token,
     user,
     validate,
-    clear
+    clear,
+    updateUser
   }
 })

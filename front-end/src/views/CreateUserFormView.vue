@@ -95,4 +95,3 @@ async function createUser() {
     </div>
   </div>  
 </template>
-

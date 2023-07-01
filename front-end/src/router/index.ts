@@ -6,6 +6,9 @@ import AlugarView from '@/views/AlugarView.vue'
 import CreateUserFormView from '@/views/CreateUserFormView.vue'
 import ImovelDetail from '@/views/ImovelDetail.vue'
 import AnunciarView from '@/views/AnunciarView.vue'
+import PageError from '@/views/PageError.vue'
+import Perfil from '@/views/Perfil.vue'
+import photoPerfil from '@/views/photoTeste.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,9 +17,11 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
-      meta: {
-        auth: true
-      }
+    },
+    {
+      path: '/teste',
+      name: 'teste',
+      component: photoPerfil,
     },
     {
       path: '/login',
@@ -32,13 +37,21 @@ const router = createRouter({
       }
     },
     {
+      path: '/perfil',
+      name: 'perfil',
+      component: Perfil,
+      meta: {
+        auth: true
+      }
+    },
+    {
       path: '/inscrever',
       name: 'inscrever',
       component: CreateUserFormView
     },
     {
       path: '/imovels/:id',
-      name: ImovelDetail,
+      name: 'ImovelDetail',
       component: ImovelDetail
     },
     {
@@ -49,6 +62,20 @@ const router = createRouter({
         auth: true
       }
     },
+    { 
+      path: "/error", 
+      name: "error", 
+      component: PageError, 
+      props: route => ({ 
+        status: route.query.status, 
+        msg: route.query.msg 
+      }) 
+    },
+    { 
+      path: '/:pathMatch(.*)*', 
+      name: 'NotFound', 
+      component: PageError 
+    }
   ]
 })
 router.beforeEach(async (to, from, next) => {
